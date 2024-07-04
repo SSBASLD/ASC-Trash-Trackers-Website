@@ -1,0 +1,27 @@
+.rounded-box {
+    border-radius: 1.5vw;
+    background: #45d1df;
+}
+
+.centered-text {
+    position: absolute;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    width:100%;
+    height: 110%;
+
+    margin: 0;
+}
+
+.label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vw;
+    text-align: center;
+}

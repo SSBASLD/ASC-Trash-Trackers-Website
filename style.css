@@ -1,0 +1,43 @@
+html, body {
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden
+}
+
+.box {
+    background:#f8f5ee;
+    height:100%;
+}
+
+.centered {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+    font-size: 10vw;
+    color:#086a35;
+}
+
+.subtitle {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:normal;
+    font-size: 4vw;
+    color:#086a35;
+
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {font-size: 4vw};
+    50% {font-size: 3vw};
+    100% {font-size: 4vw};
+}

@@ -8,6 +8,8 @@ let timeout = setTimeout(() => {
   }, 30000);
 
 document.onclick = () => {
+    clearTimeout(timeout);
+
     timeout = setTimeout(() => {
         window.location.href = window.location.href.replace('/options-page/index.html', "") + "/index.html";
       }, 30000);

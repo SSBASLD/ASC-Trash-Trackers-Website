@@ -112,23 +112,42 @@
 
       document.body.appendChild(script);
 
+      let state = "MainMenu";
+
       let timeout = setTimeout(() => {
         window.location.href = window.location.href.replace('/game/index.html', "") + "/index.html";
       }, 30000);
 
       document.onclick = (e) => {
-        if (835 < e.clientX && e.clientX < 1078 && 535 < e.clientY && e.clientY < 596) {
+        if (835 < e.clientX && e.clientX < 1078 && 535 < e.clientY && e.clientY < 596 && state == "MainMenu") {
           window.location.href = window.location.href.replace('/game/index.html', "") + "/index.html";
+        } else if (416 < e.clientY && e.clientY < 469 && 815 < e.clientX && e.clientX < 1103 && state == "MainMenu") {
+          state = "Playing";
+        } else if (1835 < e.clientX && e.clientX < 1907 && 8 < e.clientY && e.clientY < 81 && state == "Playing") {
+          state = "MainMenu";
         }
+
+        clearTimeout(timeout);
 
         timeout = setTimeout(() => {
           window.location.href = window.location.href.replace('/game/index.html', "") + "/index.html";
         }, 30000);
 
+        console.log("hi");
 
         835, 1078
         535, 596
+        
+        416, 469
+        815, 1103
+
+        1835, 1907
+        8,81
       }
+      
+      document.addEventListener("mousemove", (e) => {
+        console.log(`${e.clientX}, ${e.clientY}`);
+      })
 
     </script>
   </body>

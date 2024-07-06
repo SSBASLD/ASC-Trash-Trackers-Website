@@ -31,9 +31,7 @@ html, body {
     font-size: 4vw;
     color:#086a35;
 
-    animation-name: pulse;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
